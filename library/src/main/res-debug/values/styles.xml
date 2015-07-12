@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="DebugDrawerSectionHeader" parent="Base.TextAppearance.AppCompat.Body2">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="DebugDrawerRow">
+        <item name="android:minHeight">72dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="DebugDrawerSettingTitle" parent="Base.TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="DebugDrawerSettingValue" parent="Base.TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- ApplicationInfoSection -->
+    <string name="debug_settings_subtitle">Debug Settings</string>
+    <string name="debug_settings_subtitle_version_name">Version %1$s</string>
+
+    <!-- DeviceInformationSection -->
+    <string name="debug_header_device_information">Device Information</string>
+    <string name="debug_device_make">Make</string>
+    <string name="debug_device_model">Model Number</string>
+    <string name="debug_device_resolution">Resolution</string>
+    <string name="debug_device_resolution_value">%1$d x %2$d</string>
+    <string name="debug_device_density">Density</string>
+    <string name="debug_device_density_value">%1$s (%2$s)</string>
+    <string name="debug_device_density_value_ldpi">ldpi</string>
+    <string name="debug_device_density_value_mdpi">mdpi</string>
+    <string name="debug_device_density_value_hdpi">hdpi</string>
+    <string name="debug_device_density_value_xhdpi">xhdpi</string>
+    <string name="debug_device_density_value_xxhdpi">xxhdpi</string>
+    <string name="debug_device_density_value_xxxhdpi">xxxhdpi</string>
+    <string name="debug_device_density_value_tvdpi">tvdpi</string>
+    <string name="debug_device_density_value_unknown">unknown</string>
+    <string name="debug_device_release">Release</string>
+    <string name="debug_device_api_level">API Level</string>
+
+    <!-- BuildInformationSection -->
+    <string name="debug_header_build_information">Build Information</string>
+    <string name="debug_build_version_name">Version Name</string>
+    <string name="debug_build_version_code">Version Code</string>
+    <string name="debug_build_commit">Latest Commit #</string>
+    <string name="debug_build_time">Build Time</string>
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    android:id="@id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.mattprecious.telescope.TelescopeLayout
+        android:id="@+id/telescope_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:progressColor="?colorAccent"
+        >
+
+        <com.jakewharton.madge.MadgeFrameLayout
+            android:id="@+id/madge_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.jakewharton.scalpel.ScalpelFrameLayout
+                android:id="@+id/debug_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </com.jakewharton.madge.MadgeFrameLayout>
+
+    </com.mattprecious.telescope.TelescopeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/debug_drawer"
+        style="?debugDrawerStyle"
+        android:layout_width="@dimen/debug_drawer_default_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/debug_drawer_default_background"
+        />
+
+</android.support.v4.widget.DrawerLayout>
