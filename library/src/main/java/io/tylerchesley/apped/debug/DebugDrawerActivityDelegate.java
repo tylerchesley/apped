@@ -10,6 +10,8 @@ import java.util.List;
 import io.tylerchesley.apped.DrawerActivityViewDelegate;
 import io.tylerchesley.apped.R;
 import io.tylerchesley.apped.debug.setting.ApplicationHeader;
+import io.tylerchesley.apped.debug.setting.BooleanSetting;
+import io.tylerchesley.apped.debug.setting.EnumSetting;
 import io.tylerchesley.apped.debug.setting.ImmuttableSetting;
 import io.tylerchesley.apped.debug.setting.Section;
 import io.tylerchesley.apped.debug.setting.Setting;
@@ -48,6 +50,8 @@ public class DebugDrawerActivityDelegate extends DrawerActivityViewDelegate {
                         .add(R.layout.list_item_application_header, ApplicationHeader.class)
                         .add(R.layout.list_item_section, Section.class)
                         .add(R.layout.list_item_immutable_setting, ImmuttableSetting.class)
+                        .add(R.layout.list_item_boolean_setting, BooleanSetting.class)
+                        .add(R.layout.list_item_enum_setting, EnumSetting.class)
                         .build())
                 .build();
 
