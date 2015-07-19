@@ -4,6 +4,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.security.InvalidParameterException;
+
 import io.tylerchesley.apped.R;
 import io.tylerchesley.apped.debug.setting.Setting;
 import io.tylerchesley.rendered.factory.RendererFactory;
@@ -22,9 +24,13 @@ public class SettingsRendererFactory<S extends Setting> implements RendererFacto
         }
         else if (type == R.layout.list_item_application_header) {
             return (Renderer<S>) new ApplicationHeaderRenderer(view);
+        } else if (type == R.layout.list_item_boolean_setting) {
+            return (Renderer<S>) new BooleanSettingRenderer(view);
+        } else if (type == R.layout.list_item_enum_setting) {
+            return (Renderer<S>) new EnumSettingRenderer<>(view);
+        } else {
+            throw new InvalidParameterException("No renderer found for " + type);
         }
-
-        return null;
     }
 
 }
