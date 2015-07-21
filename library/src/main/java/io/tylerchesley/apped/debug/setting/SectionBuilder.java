@@ -23,6 +23,7 @@ public class SectionBuilder {
         return new SectionBuilder(context);
     }
 
+    // TODO: maybe move this into the constructor??
     public SectionBuilder title(@StringRes int titleRes) {
         title(context.getString(titleRes));
         return this;

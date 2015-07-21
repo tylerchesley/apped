@@ -30,4 +30,13 @@
     <string name="debug_build_commit">Latest Commit #</string>
     <string name="debug_build_time">Build Time</string>
 
+    <!-- RetrofitNetworkSectionBuilder -->
+    <string name="debug_network_header">Network</string>
+    <string name="debug_network_endpoint">Endpoint</string>
+    <string name="debug_network_variance">Variance</string>
+    <string name="debug_network_delay">Delay</string>
+    <string name="debug_network_error">Error</string>
+    <string name="debug_network_proxy">Proxy</string>
+    <string name="debug_network_logging">Logging</string>
+
 </resources>

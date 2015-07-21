@@ -13,10 +13,23 @@ import io.tylerchesley.apped.debug.DebugDrawerActivityDelegate;
 import io.tylerchesley.apped.debug.setting.ApplicationHeader;
 import io.tylerchesley.apped.debug.setting.BuildInfoSectionBuilder;
 import io.tylerchesley.apped.debug.setting.DeviceInfoSectionBuilder;
+import io.tylerchesley.apped.debug.setting.RetrofitNetworkSectionBuilder;
 import io.tylerchesley.apped.debug.setting.Setting;
 
 @Title(R.string.app_name)
 public class SamplesActivity extends AppCompatActivity {
+
+    enum Endpoint {
+
+        PRODUCTION,
+
+        BETA,
+
+        TEST,
+
+        MOCK
+
+    }
 
     private ActivityViewDelegate delegate;
 
@@ -28,6 +41,8 @@ public class SamplesActivity extends AppCompatActivity {
         settings.add(ApplicationHeader.from(this));
         settings.add(BuildInfoSectionBuilder.from(this).build());
         settings.add(DeviceInfoSectionBuilder.from(this).build());
+        settings.add(RetrofitNetworkSectionBuilder
+                .from(this).endpoints(Endpoint.class, "endpoint").build());
         delegate = new DebugDrawerActivityDelegate(settings);
 
         Apped.configure(this);
