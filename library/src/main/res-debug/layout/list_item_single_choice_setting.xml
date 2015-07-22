@@ -5,18 +5,20 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="@dimen/debug_drawer_default_list_item_padding"
     android:layout_marginRight="@dimen/debug_drawer_default_list_item_padding"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
     >
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
 

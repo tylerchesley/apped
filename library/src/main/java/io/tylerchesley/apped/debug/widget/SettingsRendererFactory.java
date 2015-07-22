@@ -24,11 +24,14 @@ public class SettingsRendererFactory<S extends Setting> implements RendererFacto
         }
         else if (type == R.layout.list_item_application_header) {
             return (Renderer<S>) new ApplicationHeaderRenderer(view);
-        } else if (type == R.layout.list_item_boolean_setting) {
+        }
+        else if (type == R.layout.list_item_boolean_setting) {
             return (Renderer<S>) new BooleanSettingRenderer(view);
-        } else if (type == R.layout.list_item_enum_setting) {
-            return (Renderer<S>) new EnumSettingRenderer<>(view);
-        } else {
+        }
+        else if (type == R.layout.list_item_single_choice_setting) {
+            return (Renderer<S>) new SingleChoiceSettingRenderer(view);
+        }
+        else {
             throw new InvalidParameterException("No renderer found for " + type);
         }
     }

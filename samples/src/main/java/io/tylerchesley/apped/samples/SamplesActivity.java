@@ -15,6 +15,8 @@ import io.tylerchesley.apped.debug.setting.BuildInfoSectionBuilder;
 import io.tylerchesley.apped.debug.setting.DeviceInfoSectionBuilder;
 import io.tylerchesley.apped.debug.setting.RetrofitNetworkSectionBuilder;
 import io.tylerchesley.apped.debug.setting.Setting;
+import retrofit.MockRestAdapter;
+import retrofit.RestAdapter;
 
 @Title(R.string.app_name)
 public class SamplesActivity extends AppCompatActivity {
@@ -41,8 +43,11 @@ public class SamplesActivity extends AppCompatActivity {
         settings.add(ApplicationHeader.from(this));
         settings.add(BuildInfoSectionBuilder.from(this).build());
         settings.add(DeviceInfoSectionBuilder.from(this).build());
+        final MockRestAdapter adapter = MockRestAdapter.from(new RestAdapter.Builder().setEndpoint("http://www.test.com").build());
         settings.add(RetrofitNetworkSectionBuilder
-                .from(this).endpoints(Endpoint.class, "endpoint").build());
+                .from(this).endpoints(Endpoint.class, "endpoint")
+                .mock(adapter)
+                .build());
         delegate = new DebugDrawerActivityDelegate(settings);
 
         Apped.configure(this);

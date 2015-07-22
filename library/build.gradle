@@ -31,5 +31,7 @@ dependencies {
     compile 'com.jakewharton.madge:madge:1.1.1'
     compile 'com.jakewharton.scalpel:scalpel:1.1.1'
     compile 'com.jakewharton:process-phoenix:1.0.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.retrofit:retrofit-mock:1.9.0'
     compile project(':rendered')
 }

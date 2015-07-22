@@ -2,7 +2,7 @@ package io.tylerchesley.apped.debug.setting;
 
 import io.tylerchesley.apped.debug.pref.StringPreference;
 
-public class EnumSetting<T extends Enum<T>> extends Setting {
+public class EnumSetting<T extends Enum<T>> extends SingleChoiceSetting {
 
     public interface Callback<T extends Enum<T>> {
 
@@ -10,9 +10,20 @@ public class EnumSetting<T extends Enum<T>> extends Setting {
 
     }
 
+    private static <T extends Enum<T>> T findSelectedItem(T[] values, String value) {
+        for (int i = 0; i < values.length; i++) {
+            if (values[i].name().equals(value)) {
+                return values[i];
+            }
+        }
+        return null;
+    }
+
     public final T[] values;
     private final StringPreference preference;
     private final Callback<T> callback;
+
+    private T selectedItem;
 
     public EnumSetting(String title, Class<T> enumClass, StringPreference preference) {
         this(title, enumClass, preference, null);
@@ -24,32 +35,36 @@ public class EnumSetting<T extends Enum<T>> extends Setting {
         this.values = enumClass.getEnumConstants();
         this.preference = preference;
         this.callback = callback;
+
+        selectedItem = findSelectedItem(values, preference.get());
     }
 
-    public T[] getItems() {
-        return values;
+    @Override
+    public int getCount() {
+        return values.length;
     }
 
-    public T getSelectedItem() {
-        final String value = preference.get();
-        for (int i = 0; i < values.length; i++) {
-            if (values[i].name().equals(value)) {
-                return values[i];
-            }
-        }
-        return null;
+    @Override
+    public int getSelectedItem() {
+        return selectedItem != null ? selectedItem.ordinal() : -1;
     }
 
-    public void setSelectedItem(T selectedItem) {
-        // TODO: optimize this check
-        if (selectedItem == getSelectedItem()) {
+    @Override
+    public void setSelectedItem(int position) {
+        if (position == getSelectedItem()) {
             return;
         }
 
+        selectedItem = values[position];
         if (callback != null && callback.onItemSelected(this, selectedItem)) {
             return;
         }
         preference.set(selectedItem.name());
+    }
+
+    @Override
+    public String getLabel(int position) {
+        return values[position].name();
     }
 
 }

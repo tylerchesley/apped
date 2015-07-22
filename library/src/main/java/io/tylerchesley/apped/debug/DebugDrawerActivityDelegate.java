@@ -13,6 +13,7 @@ import io.tylerchesley.apped.debug.setting.ApplicationHeader;
 import io.tylerchesley.apped.debug.setting.BooleanSetting;
 import io.tylerchesley.apped.debug.setting.EnumSetting;
 import io.tylerchesley.apped.debug.setting.ImmuttableSetting;
+import io.tylerchesley.apped.debug.setting.RetrofitNetworkSectionBuilder;
 import io.tylerchesley.apped.debug.setting.Section;
 import io.tylerchesley.apped.debug.setting.Setting;
 import io.tylerchesley.apped.debug.widget.ConditionalDividerDecoration;
@@ -51,7 +52,11 @@ public class DebugDrawerActivityDelegate extends DrawerActivityViewDelegate {
                         .add(R.layout.list_item_section, Section.class)
                         .add(R.layout.list_item_immutable_setting, ImmuttableSetting.class)
                         .add(R.layout.list_item_boolean_setting, BooleanSetting.class)
-                        .add(R.layout.list_item_enum_setting, EnumSetting.class)
+                        .add(R.layout.list_item_single_choice_setting, EnumSetting.class)
+                        // TODO: add ability to check if subclass
+                        .add(R.layout.list_item_single_choice_setting, RetrofitNetworkSectionBuilder.NetworkDelaySetting.class)
+                        .add(R.layout.list_item_single_choice_setting, RetrofitNetworkSectionBuilder.NetworkVarianceSetting.class)
+                        .add(R.layout.list_item_single_choice_setting, RetrofitNetworkSectionBuilder.NetworkErrorSetting.class)
                         .build())
                 .build();
 
