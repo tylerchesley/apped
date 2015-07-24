@@ -8,11 +8,11 @@ import io.tylerchesley.apped.R;
 import io.tylerchesley.apped.debug.setting.SingleChoiceSetting;
 import io.tylerchesley.apped.debug.widget.adapter.SingleChoiceAdapter;
 
-public class ChoiceSettingRenderer extends SettingRenderer<SingleChoiceSetting> {
+public class SingleChoiceSettingRenderer extends SettingRenderer<SingleChoiceSetting> {
 
     private final Spinner spinner;
 
-    public ChoiceSettingRenderer(View itemView) {
+    public SingleChoiceSettingRenderer(View itemView) {
         super(itemView);
 
         spinner = (Spinner) itemView.findViewById(R.id.spinner);
