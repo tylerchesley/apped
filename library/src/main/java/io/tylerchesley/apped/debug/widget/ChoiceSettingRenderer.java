@@ -8,12 +8,13 @@ import io.tylerchesley.apped.R;
 import io.tylerchesley.apped.debug.setting.SingleChoiceSetting;
 import io.tylerchesley.apped.debug.widget.adapter.SingleChoiceAdapter;
 
-public class SingleChoiceSettingRenderer extends SettingRenderer<SingleChoiceSetting> {
+public class ChoiceSettingRenderer extends SettingRenderer<SingleChoiceSetting> {
 
     private final Spinner spinner;
 
-    public SingleChoiceSettingRenderer(View itemView) {
+    public ChoiceSettingRenderer(View itemView) {
         super(itemView);
+
         spinner = (Spinner) itemView.findViewById(R.id.spinner);
     }
 
@@ -23,12 +24,12 @@ public class SingleChoiceSettingRenderer extends SettingRenderer<SingleChoiceSet
         // TODO: consider cashing adapters
         final SingleChoiceAdapter adapter = new SingleChoiceAdapter(spinner.getContext(), setting);
         spinner.setAdapter(adapter);
-        spinner.setSelection(setting.getSelectedItem());
+        spinner.setSelection(setting.getSelectedPosition());
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // TODO: consider another way to do this besides using a final argument
-                setting.setSelectedItem(position);
+                setting.setSelectedPosition(position);
             }
 
             @Override
@@ -37,5 +38,6 @@ public class SingleChoiceSettingRenderer extends SettingRenderer<SingleChoiceSet
             }
         });
     }
+
 
 }

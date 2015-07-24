@@ -21,18 +21,6 @@ import retrofit.RestAdapter;
 @Title(R.string.app_name)
 public class SamplesActivity extends AppCompatActivity {
 
-    enum Endpoint {
-
-        PRODUCTION,
-
-        BETA,
-
-        TEST,
-
-        MOCK
-
-    }
-
     private ActivityViewDelegate delegate;
 
     @Override
@@ -43,15 +31,30 @@ public class SamplesActivity extends AppCompatActivity {
         settings.add(ApplicationHeader.from(this));
         settings.add(BuildInfoSectionBuilder.from(this).build());
         settings.add(DeviceInfoSectionBuilder.from(this).build());
-        final MockRestAdapter adapter = MockRestAdapter.from(new RestAdapter.Builder().setEndpoint("http://www.test.com").build());
+        final RestAdapter adapter = new RestAdapter.Builder().setEndpoint("http://www.test.com").build();
+        final MockRestAdapter mockRestAdapter = MockRestAdapter.from(adapter);
         settings.add(RetrofitNetworkSectionBuilder
-                .from(this).endpoints(Endpoint.class, "endpoint")
-                .mock(adapter)
+                .from(this)
+                .endpoints(Endpoint.class)
+                .mock(mockRestAdapter)
+                .logLevel(adapter)
                 .build());
         delegate = new DebugDrawerActivityDelegate(settings);
 
         Apped.configure(this);
         delegate.setContentView(this, R.layout.activity_samples);
+    }
+
+    enum Endpoint {
+
+        PRODUCTION,
+
+        BETA,
+
+        TEST,
+
+        MOCK
+
     }
 
 }

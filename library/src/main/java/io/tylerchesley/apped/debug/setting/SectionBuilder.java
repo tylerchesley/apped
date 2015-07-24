@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.tylerchesley.apped.debug.pref.BooleanPreference;
-import io.tylerchesley.apped.debug.pref.StringPreference;
 
 public class SectionBuilder {
 
@@ -46,18 +45,6 @@ public class SectionBuilder {
 
     public SectionBuilder add(Setting child) {
         children.add(child);
-        return this;
-    }
-
-    public <T extends Enum> SectionBuilder add(@StringRes int titleRes, Class<T> enumClass,
-                                               StringPreference preference) {
-        add(context.getString(titleRes), enumClass, preference);
-        return this;
-    }
-
-    public <T extends Enum> SectionBuilder add(String title, Class<T> enumClass,
-                                               StringPreference preference) {
-        add(new EnumSetting<>(title, enumClass, preference));
         return this;
     }
 

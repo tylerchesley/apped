@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import io.tylerchesley.apped.debug.setting.SingleChoiceSetting;
-import io.tylerchesley.apped.debug.widget.adapter.BindableAdapter;
 
 public class SingleChoiceAdapter extends BindableAdapter<String> {
 
@@ -20,7 +19,7 @@ public class SingleChoiceAdapter extends BindableAdapter<String> {
 
     @Override
     public String getItem(int position) {
-        return setting.getLabel(position);
+        return setting.getLabelFor(position);
     }
 
     @Override

@@ -29,7 +29,7 @@ public class SettingsRendererFactory<S extends Setting> implements RendererFacto
             return (Renderer<S>) new BooleanSettingRenderer(view);
         }
         else if (type == R.layout.list_item_single_choice_setting) {
-            return (Renderer<S>) new SingleChoiceSettingRenderer(view);
+            return (Renderer<S>) new ChoiceSettingRenderer(view);
         }
         else {
             throw new InvalidParameterException("No renderer found for " + type);
