@@ -4,8 +4,4 @@
     <item name="debug_content_container" type="id" />
     <item name="debug_drawer_container" type="id" />
 
-    <item name="debug_drawer_type_section" type="id" />
-    <item name="debug_drawer_type_application_header" type="id" />
-    <item name="debug_drawer_type_immutable_setting" type="id" />
-
 </resources>

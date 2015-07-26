@@ -31,13 +31,22 @@
 
     </com.mattprecious.telescope.TelescopeLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <android.support.design.internal.ScrimInsetsFrameLayout
         android:id="@+id/debug_drawer"
         style="?debugDrawerStyle"
         android:layout_width="@dimen/debug_drawer_default_width"
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:background="@color/debug_drawer_default_background"
-        />
+        android:fitsSystemWindows="true"
+        >
+
+        <io.tylerchesley.apped.debug.DebugSettingsView
+            android:id="@+id/debug_settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </android.support.design.internal.ScrimInsetsFrameLayout>
 
 </android.support.v4.widget.DrawerLayout>
