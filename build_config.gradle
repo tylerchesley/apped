@@ -1,0 +1,19 @@
+ext {
+    compileSdkVersion = 22
+    buildToolsVersion = "22.0.1"
+
+    minSdkVersion = 15
+    targetSdkVersion = 22
+
+    versionCode = 1
+    versionName = '0.2'
+
+    supportLibraryVersion = '22.2.1'
+
+    supportDependencies = [
+            design           : "com.android.support:design:${supportLibraryVersion}",
+            recyclerView     : "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            appCompat        : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            supportAnnotation: "com.android.support:support-annotations:${supportLibraryVersion}",
+    ]
+}
