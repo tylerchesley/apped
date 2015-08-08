@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="@dimen/debug_drawer_default_list_item_padding"
     android:layout_marginRight="@dimen/debug_drawer_default_list_item_padding"
-    android:minHeight="?android:listPreferredItemHeight"
     android:gravity="center_vertical"
+    android:minHeight="?android:listPreferredItemHeight"
     android:orientation="vertical"
     >
 

@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
-import io.tylerchesley.apped.R;
+import io.tylerchesley.apped.debug.R;
 import io.tylerchesley.apped.debug.setting.BooleanSetting;
 
 public class BooleanSettingRenderer extends SettingRenderer<BooleanSetting>

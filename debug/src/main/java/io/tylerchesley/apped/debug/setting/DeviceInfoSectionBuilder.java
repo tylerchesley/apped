@@ -4,9 +4,18 @@ import android.content.Context;
 import android.os.Build;
 import android.util.DisplayMetrics;
 
-import io.tylerchesley.apped.R;
+import io.tylerchesley.apped.debug.R;
 
 public class DeviceInfoSectionBuilder extends SectionBuilder {
+
+    private final DisplayMetrics displayMetrics;
+
+    public DeviceInfoSectionBuilder(Context context) {
+        super(context);
+        displayMetrics = context.getResources().getDisplayMetrics();
+        title(R.string.debug_header_device_information);
+        addDefaults();
+    }
 
     private static int getDensityStringRes(DisplayMetrics displayMetrics) {
         switch (displayMetrics.densityDpi) {
@@ -31,15 +40,6 @@ public class DeviceInfoSectionBuilder extends SectionBuilder {
 
     public static DeviceInfoSectionBuilder from(Context context) {
         return new DeviceInfoSectionBuilder(context);
-    }
-
-    private final DisplayMetrics displayMetrics;
-
-    public DeviceInfoSectionBuilder(Context context) {
-        super(context);
-        displayMetrics = context.getResources().getDisplayMetrics();
-        title(R.string.debug_header_device_information);
-        addDefaults();
     }
 
     public DeviceInfoSectionBuilder addMake() {

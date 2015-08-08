@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import io.tylerchesley.apped.R;
+import io.tylerchesley.apped.debug.R;
 import io.tylerchesley.apped.debug.setting.ApplicationHeader;
 
 public class ApplicationHeaderRenderer extends SettingRenderer<ApplicationHeader> {

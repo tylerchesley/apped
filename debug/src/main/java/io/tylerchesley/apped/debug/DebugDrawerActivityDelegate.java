@@ -6,7 +6,6 @@ import android.support.annotation.LayoutRes;
 import java.util.List;
 
 import io.tylerchesley.apped.DrawerActivityViewDelegate;
-import io.tylerchesley.apped.R;
 import io.tylerchesley.apped.debug.setting.Setting;
 
 public class DebugDrawerActivityDelegate extends DrawerActivityViewDelegate {

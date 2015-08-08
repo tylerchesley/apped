@@ -5,9 +5,18 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 
-import io.tylerchesley.apped.R;
+import io.tylerchesley.apped.debug.R;
 
 public class ApplicationHeader extends Setting {
+
+    private final Drawable icon;
+    private final String subtitle;
+
+    public ApplicationHeader(String title, String subtitle, Drawable icon) {
+        super(title);
+        this.subtitle = subtitle;
+        this.icon = icon;
+    }
 
     public static ApplicationHeader from(Context context) {
         final PackageManager packageManager = context.getPackageManager();
@@ -24,15 +33,6 @@ public class ApplicationHeader extends Setting {
         } catch (PackageManager.NameNotFoundException e) {
             return context.getString(R.string.debug_settings_subtitle);
         }
-    }
-
-    private final Drawable icon;
-    private final String subtitle;
-
-    public ApplicationHeader(String title, String subtitle, Drawable icon) {
-        super(title);
-        this.subtitle = subtitle;
-        this.icon = icon;
     }
 
     public Drawable getIcon() {

@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import java.security.InvalidParameterException;
 
-import io.tylerchesley.apped.R;
+import io.tylerchesley.apped.debug.R;
 import io.tylerchesley.apped.debug.setting.Setting;
 import io.tylerchesley.rendered.factory.RendererFactory;
 import io.tylerchesley.rendered.renderer.Renderer;

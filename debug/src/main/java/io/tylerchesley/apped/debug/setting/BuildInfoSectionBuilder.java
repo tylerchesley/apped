@@ -3,17 +3,17 @@ package io.tylerchesley.apped.debug.setting;
 import android.content.Context;
 
 import io.tylerchesley.apped.BuildConfig;
-import io.tylerchesley.apped.R;
+import io.tylerchesley.apped.debug.R;
 
 public class BuildInfoSectionBuilder extends SectionBuilder {
-
-    public static BuildInfoSectionBuilder from(Context context) {
-        return new BuildInfoSectionBuilder(context);
-    }
 
     public BuildInfoSectionBuilder(Context context) {
         super(context);
         title(R.string.debug_header_build_information);
+    }
+
+    public static BuildInfoSectionBuilder from(Context context) {
+        return new BuildInfoSectionBuilder(context);
     }
 
     public BuildInfoSectionBuilder addVersionName() {

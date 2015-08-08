@@ -5,7 +5,7 @@ import android.util.Log;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.tylerchesley.apped.R;
+import io.tylerchesley.apped.debug.R;
 import io.tylerchesley.apped.debug.setting.ApplicationHeader;
 import io.tylerchesley.apped.debug.setting.BooleanSetting;
 import io.tylerchesley.apped.debug.setting.ImmuttableSetting;

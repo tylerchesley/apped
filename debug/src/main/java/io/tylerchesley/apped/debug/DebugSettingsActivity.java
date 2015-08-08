@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import java.util.List;
 
-import io.tylerchesley.apped.R;
 import io.tylerchesley.apped.debug.setting.Setting;
 
 public abstract class DebugSettingsActivity extends AppCompatActivity {

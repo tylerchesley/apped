@@ -2,7 +2,7 @@ package io.tylerchesley.apped.debug.setting;
 
 import android.content.Context;
 
-import io.tylerchesley.apped.R;
+import io.tylerchesley.apped.debug.R;
 import io.tylerchesley.apped.debug.action.Action;
 import io.tylerchesley.apped.debug.action.RestartApplicationAction;
 import retrofit.MockRestAdapter;

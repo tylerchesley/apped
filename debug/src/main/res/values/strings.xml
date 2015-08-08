@@ -30,6 +30,13 @@
     <string name="debug_build_commit">Latest Commit #</string>
     <string name="debug_build_time">Build Time</string>
 
+    <!-- UISectionBuilder -->
+    <string name="debug_ui_animations">Animations</string>
+    <string name="debug_ui_pixel_grid">Pixel Grid</string>
+    <string name="debug_ui_pixel_scale">Pixel Scale</string>
+    <string name="debug_ui_pixel_scalpel">Scalpel</string>
+    <string name="debug_ui_pixel_wireframe">Wireframe</string>
+
     <!-- RetrofitNetworkSectionBuilder -->
     <string name="debug_network_header">Network</string>
     <string name="debug_network_endpoint">Endpoint</string>

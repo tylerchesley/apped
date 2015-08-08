@@ -15,11 +15,21 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        debug {}
     }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:design:22.2.1'
+
+    compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.mattprecious.telescope:telescope:1.4.0@aar'
+    compile 'com.jakewharton.madge:madge:1.1.1'
+    compile 'com.jakewharton.scalpel:scalpel:1.1.1'
+    compile 'com.jakewharton:process-phoenix:1.0.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.retrofit:retrofit-mock:1.9.0'
+    compile project(':rendered')
+    compile project(':library')
 }

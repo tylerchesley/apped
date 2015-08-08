@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
-import io.tylerchesley.apped.R;
+import io.tylerchesley.apped.debug.R;
 import io.tylerchesley.apped.debug.setting.SingleChoiceSetting;
 import io.tylerchesley.apped.debug.widget.adapter.SingleChoiceAdapter;
 

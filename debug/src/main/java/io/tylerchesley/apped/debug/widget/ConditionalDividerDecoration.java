@@ -11,23 +11,13 @@ import android.view.View;
 
 public class ConditionalDividerDecoration extends RecyclerView.ItemDecoration {
 
+    public static final int HORIZONTAL_LIST = LinearLayoutManager.HORIZONTAL;
+    public static final int VERTICAL_LIST = LinearLayoutManager.VERTICAL;
     private static final int[] ATTRS = new int[]{
             android.R.attr.listDivider
     };
-
-    public static final int HORIZONTAL_LIST = LinearLayoutManager.HORIZONTAL;
-
-    public static final int VERTICAL_LIST = LinearLayoutManager.VERTICAL;
-
-    public interface Condition {
-
-        boolean shouldDraw(int position);
-
-    }
-
     private final Drawable mDivider;
     private final Condition condition;
-
     private int mOrientation;
 
     public ConditionalDividerDecoration(Context context, Condition condition,
@@ -106,6 +96,12 @@ public class ConditionalDividerDecoration extends RecyclerView.ItemDecoration {
         } else {
             outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0);
         }
+    }
+
+    public interface Condition {
+
+        boolean shouldDraw(int position);
+
     }
 
 }
